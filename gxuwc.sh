@@ -2,7 +2,7 @@
 
 BAIDU=$(curl baidu.com|grep 172.17.0.2)
 
-if [ ${BAIDU} ="" ]
+if [ ! -n ${BAIDU} ]
 then
 	exit 0
 else
