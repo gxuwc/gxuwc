@@ -3,7 +3,7 @@
 BAIDU=$(curl baidu.com|grep 172.17.0.2)
 
 if [ ${BAIDU} ="" ]
-	exti 0
+	exit 0
 else
 	eval WLANUSERIP=$(echo ${BAIDU}|cut -d "?" -f2|cut -d "&" -f1)
 
