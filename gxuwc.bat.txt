@@ -1,0 +1,16 @@
+@echo off
+
+
+set id=
+
+set passwd=
+
+set web=cmcc
+rem	移动	cmcc
+rem	电信	telecom 
+rem	联通	unicom
+rem	校园网	似乎留空
+
+for /f "delims=" %%i in ('ipconfig /all^| find /i "ipv4" ') do set ip=%%i
+
+
