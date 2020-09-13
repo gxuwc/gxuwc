@@ -10,6 +10,6 @@ sh文件：
        在gxuwc.sh内输入入学号，密码及运营商。
        保证gxuwc.sh有执行权限，直接执行即可
 
-bat.txt:
+bat.txt文件:
         在gxuwc.bat.txt内输入入学号，密码及运营商。
         删掉.txt后缀，双击即可运行
