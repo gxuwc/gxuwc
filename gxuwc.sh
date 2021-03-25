@@ -19,4 +19,4 @@ WEB_PROVIDER="cmcc"		#移动
 
 GET="c=ACSetting&a=Login&wlanacip=210.36.18.65&ip=${IP}&DDDDD=${ID}%40${WEB_PROVIDER}&upass=${PASSWORD}"
 
-curl http://172.17.0.2:801/eportal/?${GET} --insecure
+curl http://172.17.0.2:801/eportal/?${GET} --insecure --max-time 3
