@@ -1,4 +1,4 @@
-* gxuwc(GuangXi University Web Connection)
+* GuangXi University Web Connection
 ** 介绍
    广西大学一键实现校园网络认证
 ** 使用
