@@ -2,13 +2,17 @@
 ** 介绍
    广西大学一键实现校园网络认证
 ** 使用
-*** sh文件
-**** 直接使用
+*** gxuwc.sh文件
 	在gxuwc.sh内输入入学号，密码及运营商。
-    保证gxuwc.sh有执行权限，直接执行即可
+    
+	保证gxuwc.sh有执行权限，直接执行即可
 **** Networkmanager自动登录
 	将gxuwc.sh放入/etc/NetworkManager/dispatcher.d/pre-up.d文件夹中
+
 	保证gxuwc.sh有执行权限
-*** bat文件
-    在gxuwc.bat内输入入学号，密码及运营商。
-    双击即可运行
+*** gxuwc_openwrt.sh文件
+	由atomseek提供，未经修改
+*** gxuwc.bat文件
+	在gxuwc.bat内输入入学号，密码及运营商。
+   
+	双击即可运行
