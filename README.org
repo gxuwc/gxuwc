@@ -8,7 +8,7 @@
     
 	保证gxuwc.sh有执行权限，直接执行即可
 ***** tips
-	--max-time 3表示curl运行时间为3s，可删
+	max-time 3表示curl运行时间为3s，可删
 
 **** Networkmanager自动登录
 	将gxuwc.sh放入/etc/NetworkManager/dispatcher.d/pre-up.d文件夹中

@@ -4,7 +4,7 @@
 
 #mac用户可能需要改一下IP地址的获取方式
 
-IP=$(ip -4 a|grep inet|grep -v 127.0.0.1|cut -d "/" -f1|awk '{print $2}')
+IP=$(ip -4 a|grep inet|grep -v 127.0.0.1|cut -d "/" -f1|awk '{print $2}'|tail -n1)
 #IP=$(ifconfig |grep inet|grep -v inet6|grep -v 127|awk '{print $2}')
 
 ID=""					#学号
