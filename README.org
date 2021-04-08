@@ -1,16 +1,17 @@
 * GuangXi University Web Connection
 ** 介绍
    广西大学一键实现校园网络认证
+   
 ** 使用
 *** gxuwc.sh文件
 **** 直接使用
-	在gxuwc.sh内输入入学号，密码及运营商
+	在gxuwc.sh内输入网卡名（可选）、学号、密码及运营商
     
 	保证gxuwc.sh有执行权限，直接执行即可
-***** tips
-	max-time 3表示curl运行时间为3s，可删
 
 **** Networkmanager自动登录
+	在curl命令中加入--max-time 3
+
 	将gxuwc.sh放入/etc/NetworkManager/dispatcher.d/pre-up.d文件夹中
 
 	保证gxuwc.sh有执行权限
@@ -18,7 +19,7 @@
 *** gxuwc_openwrt.sh文件
 	由atomseek提供，未经修改
 
-*** gxuwc.bat文件
+*** gxuwc.bat文件（可能无法使用）
 	在gxuwc.bat内输入入学号，密码及运营商
    
 	双击即可运行
