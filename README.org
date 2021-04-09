@@ -10,7 +10,7 @@
 	保证gxuwc.sh有执行权限，直接执行即可
 
 **** Networkmanager自动登录
-	在curl命令中加入--max-time 3
+	在curl命令中加入---max-time 3
 
 	将gxuwc.sh放入/etc/NetworkManager/dispatcher.d/pre-up.d文件夹中
 
