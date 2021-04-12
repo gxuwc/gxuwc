@@ -5,13 +5,13 @@
 ** 使用
 *** gxuwc.sh文件(保证运行权限)
 **** 直接使用
-	方法一：./gxuwc.sh 学号 密码 网卡名 运营商
+	方法一：./gxuwc.sh 学号 密码 运营商
 		注：校园网 留空
 			移动 cmcc
 			电信 telecom
 			联通 unicom
 
-	方法二：在gxuwc.sh内输入学号、密码、网卡名（不填的话，可能不能正常获取ip）及运营商。
+	方法二：在gxuwc.sh内输入学号、密码，运营商
 
 			./gxuwc.sh或加入PATH
     
@@ -23,7 +23,7 @@
 *** gxuwc_openwrt.sh文件
 	由atomseek提供，几乎未经修改
 
-*** gxuwc.bat文件（可能无法使用）
+*** gxuwc.bat
 	在gxuwc.bat内输入入学号，密码及运营商
    
 	双击即可运行
