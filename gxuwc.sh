@@ -1,16 +1,13 @@
 #!/bin/bash
 
-#在gxuwc.sh内输入入网卡名（可选）、学号、密码及运营商。 保证gxuwc.sh有执行权限，直接执行即可
+ID="$1"           #学号
 
-#苹果用户可能需要改一下IP地址的获取方式
+PASSWORD="$2"     #密码
 
-CARD="" 		#网卡名
+CARD="$3"         #网卡名
 
-ID=""           #学号
-
-PASSWORD=""     #密码
-
-WEB_PROVIDER="cmcc"         #移动
+WEB_PROVIDER="$4"
+			#"cmcc"         #移动
         	#"telecom"      #电信
      	    #"unicom"       #联通
          	#"" 			#校园网
