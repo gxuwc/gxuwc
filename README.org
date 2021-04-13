@@ -1,6 +1,8 @@
 * GuangXi University Web Connection
 ** 介绍
-   广西大学一键实现校园网络认证
+	广西大学一键实现校园网络认证
+
+	核心 http://172.17.0.2:801/eportal/?c=ACSetting&a=Login&wlanacip=210.36.18.65&DDDDD=学号@运营商&upass=密码
    
 ** 使用
 *** gxuwc.sh文件(保证运行权限)
