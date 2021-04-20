@@ -8,17 +8,13 @@
 *** gxuwc.sh文件(保证运行权限)
 **** 直接使用
 	方法一：./gxuwc.sh 学号 密码 运营商
-		注：校园网 留空
-			移动 cmcc
-			电信 telecom
-			联通 unicom
 
 	方法二：在gxuwc.sh内输入学号、密码、运营商
 
 			./gxuwc.sh或加入PATH
     
 **** Networkmanager自动登录
-	在curl命令中加入---max-time 3，否则不能连接其他wifi
+	使用方法二的gxuwc.sh，在curl命令中加入---max-time 3，否则不能连接其他wifi
 
 	将gxuwc.sh放入/etc/NetworkManager/dispatcher.d/pre-up.d文件夹中
 
