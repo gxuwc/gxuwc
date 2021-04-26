@@ -19,7 +19,9 @@
 	将gxuwc.sh放入/etc/NetworkManager/dispatcher.d/pre-up.d文件夹中
 
 *** gxuwc_openwrt.sh文件
-	由atomseek提供，hackzhu修改
+	由[[https://github.com/Atomseek][Atomseek]]提供
+
+	使用方法写在sh文件中
 
 *** gxuwc.bat
 	在gxuwc.bat内输入入学号，密码及运营商，双击即可运行
