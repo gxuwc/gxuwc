@@ -28,7 +28,8 @@ WEB_PROVIDER1=""
 WEB_PROVIDER2=""
 
 #登录设备类型0为PC，1为移动设备
-Device_type="0"
+Device_type1="0"
+Device_type2="0"
 #-------------------参数设置区域开始分界线-------------------
 
 #--------------------------代码区----------------------------
@@ -45,7 +46,7 @@ Login1()#账户1登录函数
     Logout
     sleep 1
     Account=1
-    Login $ID1 $PASSWORD1 $WEB_PROVIDER1 $Device_type
+    Login $ID1 $PASSWORD1 $WEB_PROVIDER1 $Device_type1
     echo -e "\n\n--------------------- Login Account 1 ---------------------" >>/root/ping.log
 
 }
@@ -54,7 +55,7 @@ Login2()#账户2登录函数
     Logout
     sleep 1
     Account=2
-    Login $ID2 $PASSWORD2 $WEB_PROVIDER2 $Device_type
+    Login $ID2 $PASSWORD2 $WEB_PROVIDER2 $Device_type2
     echo -e "\n\n--------------------- Login Account 2 ---------------------" >>/root/ping.log
 }
 
