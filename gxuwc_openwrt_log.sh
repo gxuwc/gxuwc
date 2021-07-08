@@ -56,7 +56,7 @@ Login1()#本科生账号登录函数
     Login $ID1 $PASSWORD1 $WEB_PROVIDER1 $Device_type1
     echo -e "\n\n--------------------- Login Account 1 ---------------------" >/root/temp
     #时间倒序输出结果
-    sed -i '/#/r temp' ping.log
+    sed -i '/#/r /root/temp' /root/ping.log
 
 }
 Login2()#研究生账号登录函数
@@ -67,14 +67,14 @@ Login2()#研究生账号登录函数
     Login $ID2 $PASSWORD2 $WEB_PROVIDER2 $Device_type2
     echo -e "\n\n--------------------- Login Account 2 ---------------------" >/root/temp
     #时间倒序输出结果
-    sed -i '/#/r temp' ping.log
+    sed -i '/#/r /root/temp' /root/ping.log
 }
 
 
 #表示当前账号，0表示未登录账号，1表示登录本科生账号，2表示登录研究生账号
 Account=0
 #运行程序前清空日志
-echo "#" >ping.log
+echo "#" >/root/ping.log
 
 #设置死循环
 while true;do
@@ -91,7 +91,7 @@ while true;do
     echo -e "-----------------------------${Account}-----------------------------" >>/root/temp
 
     #时间倒序输出结果
-    sed -i '/#/r temp' ping.log
+    sed -i '/#/r /root/temp' /root/ping.log
 
     #获取当前时间
     Time=$(date +%-H%M)
