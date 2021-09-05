@@ -3,16 +3,16 @@
 ###此脚本由atomseek提供，hackzhu修改
 
 #gxuwc_openwrt_log.sh是一个openwrt系统用的sh脚本，用以路由器自动登录校园网。
-#食用方法：首先你需要一个有OpenWrt系统的路由器
-#1、按照下方说明输入参数，共4种参数，完成后保存文件
+#食用方法：首先你需要一个有OpenWrt系统的路由器，且剩余空间应大于3MB
+#1、按照下方说明输入参数，共4个参数，完成后保存文件
 #2、保存文件后，把文件上传到路由器，传文件教程百度搜索：WinSCP如何登陆路由器-百度经验。把脚本放到/root目录。
-#3、上传完毕，按Shift+Ctrl+T打开WinSCP的终端，输入该命令：sed -i 's/exit 0/sh \/root\/gxuwc_openwrt_log.sh \&\nexit 0/' /etc/rc.local&&touch temp&&touch ping.log
+#3、上传完毕，按Shift+Ctrl+T打开WinSCP的终端，输入该命令：sed -i 's/exit 0/sh \/root\/gxuwc_openwrt_log.sh \&\nexit 0/' /etc/rc.local
 #4、点击执行后，关闭窗口，重启路由器。这样，路由器每次开机就会启动脚本，当网络断开时会自动尝试重连。在/root目录下的ping.log记录了连接日志。
 
 #5、若要停用脚本，则打开终端输入：sed -i 's/sh \/root\/gxuwc_openwrt_log.sh \&//' /etc/rc.local  
 #6、点击执行后，关闭窗口，重启路由器即可。
 
-#7、可能需要关闭自服务系统中的无感知功能
+#可能需要关闭自服务系统中的无感知功能
 
 #-------------------参数设置区域开始分界线-------------------
 #账号即学号
@@ -35,8 +35,8 @@ WEB_PROVIDER1=""
 WEB_PROVIDER2=""
 
 #登录设备类型：0为PC，1为移动设备
-Device_type1=""
-Device_type2=""
+Device_type1="0"
+Device_type2="0"
 #-------------------参数设置区域开始分界线-------------------
 
 #-------------------------代码区--------------------------
@@ -73,13 +73,16 @@ Login2()#研究生账号登录函数
 
 #表示当前账号，0表示未登录账号，1表示登录本科生账号，2表示登录研究生账号
 Account=0
+#日志计数
+count="10000"
 #运行程序前清空日志
 echo "#" >/root/ping.log
 
 #设置死循环
 while true;do
 
-    echo -e "\n$(date +%Y-%m-%d) $(date +%H:%M:%S) Account: ${Account} ----------------------------" >/root/temp
+    let count++
+    echo -e "\n$(date +%Y-%m-%d) $(date +%H:%M:%S) Account: ${Account} ------------------------${count:1}" >/root/temp
     #ping百度dns服务器检测网络是否连通
     ping -c 3 180.76.76.76 >>/root/temp
     #若不连通则把登录账户设为空，用于重连
@@ -134,6 +137,12 @@ while true;do
     #本科生账号为空，且填有研究生账号，则任意时刻都尝试登录研究生账号
     elif [ ! -z $ID2 ];then
         Login2
+    fi
+
+    #当断网检测5000次时清空日志
+    if [ $count -ge 15000 ];then
+        echo "#" >/root/ping.log
+        count="10000"
     fi
 
     #间隔120s再次检测网络是否连通
