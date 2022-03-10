@@ -26,7 +26,7 @@ gxuwc_openwrt.sh是一个openwrt系统用的登录脚本，用以路由器自动
 
 若要停用脚本
 1、WinSCP登录路由器，按Shift+Ctrl+T打开WinSCP的终端输入：sed -i 's/sh \/root\/gxuwc_openwrt.sh \&//' /etc/rc.local  
-6、点击执行后，关闭窗口，重启路由器即可。
+2、点击执行后，关闭窗口，重启路由器即可。
 
 #可能需要关闭自服务系统中的无感知功能
 ```
