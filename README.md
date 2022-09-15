@@ -50,7 +50,7 @@ unicom:联通
            {"base": "10.51.0.1/16", "size": 24}
          ]
     } 
-'''
+'''shell
 3.重启docker:/etc/init.d/dockerd restart
 ## 感谢
 [hackzhu](https://github.com/hackzhu)
