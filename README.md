@@ -42,16 +42,17 @@ unicom:联通
 然后将其加入PATH
 ```
 ## 校园网认证ip网段与docker虚拟网卡IP冲突的解决办法
+```shell
 1.停止docker：/etc/init.d/dockerd stop
 2.在/etc/docker/daemon.json中加入以下内容并保存：
-'''shell
 	 {
         "default-address-pools": [
            {"base": "10.51.0.1/16", "size": 24}
          ]
     } 
-'''
 3.重启docker:/etc/init.d/dockerd restart
+```
+
 ## 感谢
 [hackzhu](https://github.com/hackzhu)
 [Atomseek](https://github.com/Atomseek)
