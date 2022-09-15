@@ -47,7 +47,7 @@ unicom:联通
 2.在/etc/docker/daemon.json中加入以下内容并保存：
 	 {
         "default-address-pools": [
-           {"base": "10.51.0.1/16", "size": 24}
+           {"base": "10.51.0.1/16", "size": 24} #此处的ip即为新的ip地址，注意不要与其他服务的ip段冲突
          ]
     } 
 3.重启docker:/etc/init.d/dockerd restart
